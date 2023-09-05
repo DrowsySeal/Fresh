@@ -332,6 +332,10 @@ legend .with-tooltip {
     display: inline;
 }
 
+.hide-mobile {
+    display: none;
+}
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -426,6 +430,10 @@ legend .with-tooltip {
 
     .dropdown li span {
         padding-left: 0.5rem;
+    }
+    
+    .hide-mobile {
+        display: inline;
     }
     
 }
