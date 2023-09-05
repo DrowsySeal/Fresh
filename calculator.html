@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/32bceee90f.js" crossorigin="anonymous"></script>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>DrowsySeal</title>
+  <meta name="description" content="DrowsySeal: A fursuit maker who specializes in cute sparkledogs c:">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/barebones.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/32bceee90f.css" crossorigin="anonymous">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon-16.ico">
+
+</head>
+<body>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Start NAV -->
+    <nav class="list-wrap">
+      <a href="/"><img id="mobile-logo" src="./images/logo.png"></a></li>
+      <ul class="grid-container sevenths menu">
+        <li><a href="/portfolio.html">Portfolio</a></li>   
+        <div aria-haspopup="true" class="dropdown">
+          <li>Fursuits <span>&#9660;</span></li>
+          <div class="dropdown-options grid-container thirds">
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/premades.html">Premades</a></li>
+            <li><a href="/commissions.html">Commissions</a></li>
+          </div>
+        </div>
+        <li><a href="/faq.html">FAQs</a></li>
+        <li id="logo"><a href="/"><img src="./images/logo.png"></a></li>
+        <li><a href="/tos.html">ToS</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="https://drowsyseal.bigcartel.com/">Shop</a></li>
+      </ul>
+      <button class="hamburger">
+        <i class="fa fa-solid fa-bars menuIcon"></i>
+        <i class="fa fa-solid fa-xmark closeIcon"></i>
+      </button>
+    </nav>
+    <!-- End NAV -->
+    <div class="grid-container full">
+        <h1>Estimate Calculator</h1>
+        <form id="calculator" class="grid-container full u-align-left">
+          <legend>Commission Type</legend> 
+          <select name="commType">
+            <option>Head</option>
+            <option>Partial</option>
+            <option>Fullsuit</option>
+          </select>
+
+          <legend>Number of Fur Colors</legend>
+          <select name="furColors">
+            <option>1-2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6+</option>
+          </select>
+         
+          <legend>Number of Mochi Colors</legend>
+          <select name="mochiColors">
+            <option>1-2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6+</option>
+          </select>
+          
+          <legend class="with-tooltip">Design Complexity<i class="fa-solid fa-circle-exclamation tooltip right"></i></legend>
+          <div>
+            <label for="simple"><input type="radio" id="simple" name="complexity" value="Simple">Simple: No markings, or very few large markings</label>
+            <label for="moderate"> <input type="radio" id="moderate" name="complexity" value="Moderate">Moderate: Some large markings, few large spots or stripes</label>
+            <label for="complex"><input type="radio" id="complex" name="complexity" value="Complex">Complex: Multiple spots or stripes, or one intricate marking</label>
+            <label for="very-complex"><input type="radio" id="very-complex" name="complexity" value="Very Complex">Very Complex: Intricate markings, many spots or stripes, asymmetry</label>
+          </div>
+          <legend>Add-Ons</legend>
+          <div>
+            <label for="eyelids"><input type="checkbox" id="eyelids" name="addons" value="eyelids" />Velcro Eyelids</label>
+            <label for="tongues"><input type="checkbox" id="tongues" name="addons" value="tongues" />Extra Tongue</label>
+            <label for="horns"><input type="checkbox" id="horns" name="addons" value="horns" />Horns/Antlers</label>
+            <label for="teeth"><input type="checkbox" id="teeth" name="addons" value="teeth" />Plush Teeth</label>
+          </div>
+          
+          
+          <button>Add to receipt</button> or <button id="reset">Reset</button>
+        </form>
+        <p id="outputarea"></p>
+
+        <script src="js/calculator.js"></script>
+        </body>
