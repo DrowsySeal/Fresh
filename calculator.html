@@ -59,52 +59,58 @@
     <!-- End NAV -->
     <div class="grid-container full">
         <h1>Estimate Calculator</h1>
-        <h2>[WIP]</h2>
-        <form id="calculator" class="grid-container full u-align-left">
-          <legend>Commission Type</legend> 
-          <select name="commType">
-            <option>Head</option>
-            <option>Partial</option>
-            <option>Fullsuit</option>
-          </select>
+        <div class="grid-container full u-align-left">
+          <form action="" id="calculator" onsubmit="return false;">
+            <fieldset>
+              <legend>Commission Type</legend> 
+              <select id="commType" name="commType" onchange="calculateTotal()">
+                <option value="head">Head</option>
+                <option value="partial">Partial</option>
+                <option value="fullsuit">Fullsuit</option>
+              </select>
 
-          <legend>Number of Fur Colors</legend>
-          <select name="furColors">
-            <option>1-2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6+</option>
-          </select>
-         
-          <legend>Number of Mochi Colors</legend>
-          <select name="mochiColors">
-            <option>1-2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6+</option>
-          </select>
-          
-          <legend class="with-tooltip">Design Complexity<i class="fa-solid fa-circle-exclamation tooltip right"></i></legend>
-          <div>
-            <label for="simple"><input type="radio" id="simple" name="complexity" value="Simple">Simple: No markings, or very few large markings</label>
-            <label for="moderate"> <input type="radio" id="moderate" name="complexity" value="Moderate">Moderate: Some large markings, few large spots or stripes</label>
-            <label for="complex"><input type="radio" id="complex" name="complexity" value="Complex">Complex: Multiple spots or stripes, or one intricate marking</label>
-            <label for="very-complex"><input type="radio" id="very-complex" name="complexity" value="Very Complex">Very Complex: Intricate markings, many spots or stripes, asymmetry</label>
-          </div>
-          <legend>Add-Ons</legend>
-          <div>
-            <label for="eyelids"><input type="checkbox" id="eyelids" name="addons" value="eyelids" />Velcro Eyelids</label>
-            <label for="tongues"><input type="checkbox" id="tongues" name="addons" value="tongues" />Extra Tongue</label>
-            <label for="horns"><input type="checkbox" id="horns" name="addons" value="horns" />Horns/Antlers</label>
-            <label for="teeth"><input type="checkbox" id="teeth" name="addons" value="teeth" />Plush Teeth</label>
-          </div>
-          
-          
-          <button id="reset">Reset</button>
-        </form>
-        <p id="outputarea"></p>
+              <legend>Number of Fur Colors</legend>
+              <select id="furColors" name="furColors" onchange="calculateTotal()">
+                <option value="fur1">1-2</option>
+                <option value="fur3">3</option>
+                <option value="fur4">4</option>
+                <option value="fur5">5</option>
+                <option value="fur6">6+</option>
+              </select>
+            
+              <legend>Number of Mochi Colors</legend>
+              <select name="mochiColors" onchange="calculateTotal()">
+                <option value="mochi1">1-2</option>
+                <option value="mochi3">3</option>
+                <option value="mochi4">4</option>
+                <option value="mochi5">5</option>
+                <option value="mochi6">6+</option>
+              </select>
+              
+              <legend class="with-tooltip">Design Complexity<i class="fa-solid fa-circle-exclamation tooltip right"></i></legend>
+              <div>
+                <label for="simple"><input type="radio" id="simple" name="complexity" value="Simple" onchange="calculateTotal()">Simple: No markings, or very few large markings</label>
+                <label for="moderate"> <input type="radio" id="moderate" name="complexity" value="Moderate" onchange="calculateTotal()">Moderate: Some large markings, few large spots or stripes</label>
+                <label for="complex"><input type="radio" id="complex" name="complexity" value="Complex" onchange="calculateTotal()">Complex: Multiple spots or stripes, or one intricate marking</label>
+                <label for="veryComplex"><input type="radio" id="veryComplex" name="complexity" value="Very Complex" onchange="calculateTotal()">Very Complex: Intricate markings, many spots or stripes, asymmetry</label>
+              </div>
 
+              <legend>Add-Ons</legend>
+              <div id="addonCalc">
+                <label for="eyelids"><input type="checkbox" id="eyelids" name="addons" value="eyelids" onchange="calculateTotal()"/>Velcro Eyelids</label>
+                <label for="tongues"><input type="checkbox" id="tongues" name="addons" value="tongues" onchange="calculateTotal()"/>Extra Tongue</label>
+                <label for="teeth"><input type="checkbox" id="teeth" name="addons" value="teeth" onchange="calculateTotal()"/>Plush Teeth</label>
+                <label for="horns"><input type="checkbox" id="horns" name="addons" value="horns" onchange="calculateTotal()"/>Horns</label>
+                <label for="antlers"><input type="checkbox" id="antlers" name="addons" value="antlers" onchange="calculateTotal()"/>Antlers</label>
+                <label for="hair"><input type="checkbox" id="hair" name="addons" value="hair" onchange="calculateTotal()"/>Complex Hair</label>
+                <label for="piercings"><input type="checkbox" id="piercings" name="addons" value="piercings" onchange="calculateTotal()"/>Piercings</label>
+                <label for="wings_small"><input type="checkbox" id="wings_small" name="addons" value="wings_small" onchange="calculateTotal()"/>Small Wings</label>
+                <label for="claws"><input type="checkbox" id="claws" name="addons" value="claws" onchange="calculateTotal()"/>Plush Claws</label>
+              </div>
+            </fieldset>
+          </form>
+        <p id="totalPrice"></p>
+        </div>
+        <script src="js/script.js"></script>
         <script src="js/calculator.js"></script>
         </body>
