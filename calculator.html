@@ -63,8 +63,8 @@
           <form action="" id="calculator" onsubmit="return false;">
             <fieldset>
               <legend>Commission Type</legend> 
-              <select id="commType" name="commType" onchange="calculateTotal()">
-                <option value="head">Head</option>
+              <select id="commType" name="commType" onchange="calculateTotal(); changeType();">
+                <option value="head" checked>Head</option>
                 <option value="partial">Partial</option>
                 <option value="fullsuit">Fullsuit</option>
               </select>
@@ -89,12 +89,12 @@
               
               <legend class="with-tooltip">Design Complexity<i class="fa-solid fa-circle-exclamation tooltip right"></i></legend>
               <div>
-                <label for="simple"><input type="radio" id="simple" name="complexity" value="Simple" onchange="calculateTotal()">Simple: No markings, or very few large markings</label>
+                <label for="simple"><input type="radio" id="simple" name="complexity" value="Simple" checked onchange="calculateTotal()">Simple: No markings, or very few large markings</label>
                 <label for="moderate"> <input type="radio" id="moderate" name="complexity" value="Moderate" onchange="calculateTotal()">Moderate: Some large markings, few large spots or stripes</label>
-                <label for="complex"><input type="radio" id="complex" name="complexity" value="Complex" onchange="calculateTotal()">Complex: Multiple spots or stripes, or one intricate marking</label>
+                <label for="complex"><input type="radio" id="complex" name="complexity" value="Complex" onchange="calculateTotal()">Complex: Multiple spots or stripes, or a couple intricate markings</label>
                 <label for="veryComplex"><input type="radio" id="veryComplex" name="complexity" value="Very Complex" onchange="calculateTotal()">Very Complex: Intricate markings, many spots or stripes, asymmetry</label>
               </div>
-
+              
               <legend>Add-Ons</legend>
               <div id="addonCalc">
                 <label for="eyelids"><input type="checkbox" id="eyelids" name="addons" value="eyelids" onchange="calculateTotal()"/>Velcro Eyelids</label>
@@ -103,9 +103,15 @@
                 <label for="horns"><input type="checkbox" id="horns" name="addons" value="horns" onchange="calculateTotal()"/>Horns</label>
                 <label for="antlers"><input type="checkbox" id="antlers" name="addons" value="antlers" onchange="calculateTotal()"/>Antlers</label>
                 <label for="hair"><input type="checkbox" id="hair" name="addons" value="hair" onchange="calculateTotal()"/>Complex Hair</label>
-                <label for="piercings"><input type="checkbox" id="piercings" name="addons" value="piercings" onchange="calculateTotal()"/>Piercings</label>
-                <label for="wings_small"><input type="checkbox" id="wings_small" name="addons" value="wings_small" onchange="calculateTotal()"/>Small Wings</label>
-                <label for="claws"><input type="checkbox" id="claws" name="addons" value="claws" onchange="calculateTotal()"/>Plush Claws</label>
+                <label for="piercings"><input type="checkbox" id="head-piercings" name="addons" value="piercings" onchange="calculateTotal()"/>Piercings</label>
+                <!-- <span><strong>Handpaws:</strong></span>
+                <label for="handpaw-claws"><input type="checkbox" id="handpaw-claws" name="addons" value="handpaw-claws" onchange="calculateTotal()"/>Plush Claws</label> 
+
+                <span><strong>Feetpaws:</strong></span>
+                <label for="feetpaw-claws"><input type="checkbox" id="feetpaw-claws" name="addons" value="feetpaw-claws" onchange="calculateTotal()"/>Plush Claws</label> 
+
+                <span><strong>Bodysuit:</strong></span>
+                <label for="wings-small"><input type="checkbox" id="wings-small" name="addons" value="wings-small" onchange="calculateTotal()"/>Small Wings</label> -->
               </div>
             </fieldset>
           </form>

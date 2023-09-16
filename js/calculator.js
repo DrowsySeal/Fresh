@@ -1,3 +1,4 @@
+//// PRICING CALCULATOR ////
 var base_prices = new Array();
 base_prices["head"]=2700;
 base_prices["partial"]=3300;
@@ -21,12 +22,13 @@ var addon_prices = new Array();
 addon_prices["eyelids"] = 35;
 addon_prices["tongues"] = 20;
 addon_prices["teeth"] = 30;
-addon_prices["claws"] = 50;
 addon_prices["hair"] = 50;
 addon_prices["piercings"] = 50;
-addon_prices["wings_small"] = 300;
 addon_prices["horns"] = 50;
 addon_prices["antlers"] = 200;
+// addon_prices["handpaw-claws"] = 50;
+// addon_prices["feetpaw-claws"] = 50;
+// addon_prices["wings-small"] = 300;
 
 var complexity_prices = new Array();
 complexity_prices["Simple"] = 1;
@@ -109,6 +111,19 @@ function calculateTotal()
     "Estimated price is $"+totalPrice;
 }
 
+// // Show or hide head/partial/fullsuit options and clear when necessary
+// function changeType()
+// {
+//   var commDrop = document.getElementById("commType");
+//   var selectedValue = commDrop.options[commDrop.selectedIndex].value;
 
+//   var theForm = document.forms["calculator"];
+// 	var addons = theForm.elements["addons"];
 
-
+//     if (selectedValue == "head") {
+//       // hide and clear partial and fullsuit options
+//       var partialOnly = document.getElementsByClassName("partial");
+//       partialOnly.checked = false;
+//       partialOnly.setAttribute('hidden','true');
+//     }
+// }
