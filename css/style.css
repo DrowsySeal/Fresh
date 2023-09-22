@@ -78,7 +78,6 @@ nav li #logo {
     color: #323238;
     list-style: none;
     padding-top: 6.5rem;
-    
   }
   
   .showMenu {
@@ -178,9 +177,9 @@ nav li #logo {
     display:block;
 }
 
-#socials img {
+/* #socials img {
     display: none;
-}
+} */
 
 /* ABOUT
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

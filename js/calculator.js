@@ -1,4 +1,4 @@
-//// PRICING CALCULATOR ////
+//////////////// PRICING CALCULATOR ////////////////
 var base_prices = new Array();
 base_prices["head"]=2700;
 base_prices["partial"]=3300;
