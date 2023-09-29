@@ -17,6 +17,10 @@ Medium: 30b0d3
 
 */
 
+body {
+    min-height: 100vh;
+}
+
 /* NAV
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .list-wrap {
@@ -203,7 +207,7 @@ nav li #logo {
     bottom:0;
     left:0;
     background-color: #323238;
-    color: #7a8691
+    color: #7a8691;
 }
 
 #footer h5 {
@@ -235,6 +239,8 @@ nav li #logo {
     display: flex;
 }
 
+
+
 #shoutout {
     text-align: left;
 }
@@ -249,7 +255,10 @@ nav li #logo {
     color:#7a8691;
     text-align: center;
     font-size: 1.2rem;
+    position: sticky;
+    top: 100vh;
 }
+
 
 /* ------------- MISC */
 
