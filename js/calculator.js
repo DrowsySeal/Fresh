@@ -127,3 +127,6 @@ function calculateTotal()
 //       partialOnly.setAttribute('hidden','true');
 //     }
 // }
+
+
+
