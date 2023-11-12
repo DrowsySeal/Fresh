@@ -1,4 +1,0 @@
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
