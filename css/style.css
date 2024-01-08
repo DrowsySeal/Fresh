@@ -287,6 +287,10 @@ nav li #logo {
     font-size: 1.25rem;
 }
 
+.sidenote {
+    font-size: 1.25rem;
+}
+
 .small {
     font-size: 1rem;
 }
@@ -305,43 +309,68 @@ input[type="checkbox"]{
 
 legend {
     font-weight: 600;
+    font-size: 1.75rem;
+    width:100%;
+    background-color: var(--border-color-softer);
+    padding: 0 1rem;
+    border-radius: 4px;
 }
 
-.tooltip {
-    position: relative;
-    width: 50%;
-}
-
-.tooltip::after {
-    display: none;
-    position: absolute;
-    z-index: 9;
+.on-hover {
+    visibility: hidden;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    display: inline-block;
+    z-index: 1s;
+    position: absolute;
+    border: 1px solid var(--border-color-softer);
+    border-radius: 4px;
+    background-color: var(--border-color-softer);
+    margin-left: 4px;
+    padding: 1rem;
 }
 
-.tooltip.right::after {
-    content: 'This is an approximation only, and will be decided based on my own discretion.';
-    top: -0.5rem;
-    right: 0;
-    transform: translateX(5rem);
-}
-
-.tooltip:hover::after {
-    display: block;
+.tooltip:hover ~ .on-hover{
+    visibility: visible;
 }
 
 #tool {
     display: inline;
 }
 
-legend .with-tooltip {
-    display: inline;
-}
-
 .hide-mobile {
     display: none;
+}
+
+select {
+    width: 100%;
+}
+
+select:focus {
+    border: 1px solid var(--border-color-softer);
+}
+
+option {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+#estimate-form {
+    margin-bottom: -5rem;
+}
+
+#estimate {
+    margin-bottom: 0;
+}
+
+#totalPrice {
+    border-radius: 4px;
+    background-color: var(--border-color-softer);
+    margin-left: 4px;
+    padding: 1rem;
 }
 
 /* Media Queries

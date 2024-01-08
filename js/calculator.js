@@ -18,17 +18,34 @@ mochi_prices["mochi4"]=110;
 mochi_prices["mochi5"]=165;
 mochi_prices["mochi6"]=220;
 
-var addon_prices = new Array();
-addon_prices["eyelids"] = 35;
-addon_prices["tongues"] = 20;
-addon_prices["teeth"] = 30;
-addon_prices["hair"] = 50;
-addon_prices["piercings"] = 50;
-addon_prices["horns"] = 50;
-addon_prices["antlers"] = 200;
-// addon_prices["handpaw-claws"] = 50;
-// addon_prices["feetpaw-claws"] = 50;
-// addon_prices["wings-small"] = 300;
+var head_addon_prices = new Array();
+head_addon_prices["eyelids"] = 35;
+head_addon_prices["tongues"] = 20;
+head_addon_prices["teeth"] = 30;
+head_addon_prices["hair"] = 100;
+head_addon_prices["piercings"] = 50;
+head_addon_prices["horns"] = 50;
+head_addon_prices["antlers"] = 200;
+
+var partial_addon_prices = new Array();
+partial_addon_prices["handpaw-claws"] = 50;
+partial_addon_prices["feetpaws"] = 550;
+partial_addon_prices["sockpaws"] = 500;
+partial_addon_prices["feetpaw-claws"] = 50;
+partial_addon_prices["tail-nub"] = 0;
+partial_addon_prices["tail-curly"] = 50;
+partial_addon_prices["tail-feline"] = 50;
+partial_addon_prices["tail-floor"] = 100;
+
+var fullsuit_addon_prices = new Array();
+fullsuit_addon_prices["wings-small"] = 300;
+fullsuit_addon_prices["handpaw-claws"] = 50;
+fullsuit_addon_prices["feetpaw-claws"] = 50;
+fullsuit_addon_prices["feetpaw-indoor"] = 100;
+fullsuit_addon_prices["tail-nub"] = 0;
+fullsuit_addon_prices["tail-curly"] = 50;
+fullsuit_addon_prices["tail-feline"] = 50;
+fullsuit_addon_prices["tail-floor"] = 100;
 
 var complexity_prices = new Array();
 complexity_prices["Simple"] = 1;
@@ -75,6 +92,7 @@ function getComplexityPrice()
     var complexityPrice=0;
     var theForm = document.forms["calculator"];
     var complexity = theForm.elements["complexity"];
+
     for(var i = 0; i < complexity.length; i++)
     {
         if(complexity[i].checked)
@@ -89,44 +107,93 @@ function getComplexityPrice()
 
 // ADD-ONS
 function getAddonsPrice() {
-	var addonsCost = 0;
-  var theForm = document.forms["calculator"];
-	var addons = theForm.elements["addons"];
+    var commDrop = document.getElementById("commType");
+    var selectedValue = commDrop.options[commDrop.selectedIndex].value;
+   
+    var addonsCost = 0;
+    var theForm = document.forms["calculator"];
+	var headAddons = theForm.elements["head-addons"];
+    var partialAddons = theForm.elements["partial-addons"];
+    var fullsuitAddons = theForm.elements["fullsuit-addons"];
 
-	for (var i = 0; i < addons.length; i++) {
-		if (addons[i].checked) {
-			addonsCost = addonsCost + addon_prices[addons[i].value];
-		}
-	}
-	return addonsCost;
+    const expr = selectedValue;
+
+    // Calculate head addons
+    for (var i = 0; i < headAddons.length; i++) {
+        if (headAddons[i].checked) {
+            addonsCost = addonsCost + head_addon_prices[headAddons[i].value];
+        }
+    };
+        
+    // Calculate partial or fullsuit addons
+    switch (expr) {
+    case 'partial':
+        for (var i = 0; i < partialAddons.length; i++) {
+            if (partialAddons[i].checked) {
+                addonsCost = addonsCost + partial_addon_prices[partialAddons[i].value];
+            }
+        };
+        break;
+    case 'fullsuit':
+        for (var i = 0; i < fullsuitAddons.length; i++) {
+            if (fullsuitAddons[i].checked) {
+                addonsCost = addonsCost + fullsuit_addon_prices[fullsuitAddons[i].value];
+            }
+        }
+        break;
+    };
+
+    return addonsCost;
 }
 
 // TOTAL CALCULATION
 function calculateTotal()
 {
-  var addComplexity = Math.round(getBasePrice()*getComplexityPrice());
-  var totalPrice = addComplexity + getFurPrice() + getMochiPrice() + getAddonsPrice();
+    var addComplexity = Math.round(getBasePrice()*getComplexityPrice());
+    var totalPrice = addComplexity + getFurPrice() + getMochiPrice() + getAddonsPrice();
 
-  document.getElementById('totalPrice').innerHTML =
-    "Estimated price is $"+totalPrice;
+    document.getElementById('totalPrice').innerHTML =
+        "$"+totalPrice;
 }
 
-// // Show or hide head/partial/fullsuit options and clear when necessary
-// function changeType()
-// {
-//   var commDrop = document.getElementById("commType");
-//   var selectedValue = commDrop.options[commDrop.selectedIndex].value;
+// CHANGE COMMISSION TYPE 
+// Show or hide head/partial/fullsuit options, and clear when necessary
+function changeType()
+{
+    var commDrop = document.getElementById("commType");
+    var selectedValue = commDrop.options[commDrop.selectedIndex].value;
+        
+    const expr = selectedValue;
+    switch (expr) {
+    case 'head':
+        document.getElementById('head').style.display = 'block';
+        document.getElementById('partial').style.display = 'none';
+        document.getElementById('feetpaws-partial').style.display = 'none';
+        document.getElementById('tail-partial').style.display = 'none';
+        document.getElementById('tail-fullsuit').style.display = 'none';
+        document.getElementById('fullsuit').style.display = 'none';
+        break;
+    case 'partial':
+        document.getElementById('head').style.display = 'block';
+        document.getElementById('partial').style.display = 'block';
+        document.getElementById('feetpaws-partial').style.display = 'block';
+        document.getElementById('tail-partial').style.display = 'block';
+        document.getElementById('tail-fullsuit').style.display = 'none';
+        document.getElementById('fullsuit').style.display = 'none';
+        break;
+    case 'fullsuit':
+        document.getElementById('head').style.display = 'block';
+        document.getElementById('feetpaws-partial').style.display = 'none';
+        document.getElementById('partial').style.display = 'none';
+        document.getElementById('tail-partial').style.display = 'none';
+        document.getElementById('tail-fullsuit').style.display = 'block';
+        document.getElementById('fullsuit').style.display = 'block';
+        break;
+    default:
+        console.log('Hi c:');
+    }
+}
 
-//   var theForm = document.forms["calculator"];
-// 	var addons = theForm.elements["addons"];
-
-//     if (selectedValue == "head") {
-//       // hide and clear partial and fullsuit options
-//       var partialOnly = document.getElementsByClassName("partial");
-//       partialOnly.checked = false;
-//       partialOnly.setAttribute('hidden','true');
-//     }
-// }
-
+changeType();
 
 
