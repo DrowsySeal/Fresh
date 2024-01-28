@@ -13,8 +13,6 @@ BLUE:
 Main: 57d7fa
 Darker Main: 0088ad
 Medium: 30b0d3
-
-
 */
 
 body {
@@ -96,19 +94,19 @@ nav li #logo {
   .dropdown {
     display: inline-block;
     position: relative;
+    cursor: pointer;
+    overflow: visible;
   }
-  
+
   .dropdown-options {
     display: none;
-    overflow: auto;
+    overflow: visible;
     background-color:#fff;
     border-radius:5px;
   }
-  
-  .dropdown:hover .dropdown-options, .dropdown:active .dropdown-options, .dropdown:focus .dropdown-options {
+
+  .showDropdown {
     display: block;
-    margin:0;
-    padding: 0;
   }
 
   .dropdown-options a {
@@ -447,12 +445,12 @@ option {
     .dropdown-options {
     display: none;
     position: absolute;
-    overflow: auto;
+    overflow: visible;
     background-color:#fff;
     border-radius:5px;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
     }
-    
+
     .dropdown-options a {
     display: block;
     text-decoration: none;
