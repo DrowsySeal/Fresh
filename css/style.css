@@ -369,6 +369,12 @@ option {
     padding: 1rem;
 }
 
+.inactive {
+    pointer-events: none;
+    cursor: default;
+    background-color:#d7d8d9;
+}
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
