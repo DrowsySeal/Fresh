@@ -1,8 +1,8 @@
 //////////////// PRICING CALCULATOR ////////////////
 var base_prices = new Array();
-base_prices["head"]=2700;
-base_prices["partial"]=3300;
-base_prices["fullsuit"]=6500;
+base_prices["head"]=3000;
+base_prices["partial"]=3600;
+base_prices["fullsuit"]=7700;
 
 var fur_prices = new Array();
 fur_prices["fur1"]=0;
@@ -25,27 +25,29 @@ head_addon_prices["teeth"] = 30;
 head_addon_prices["hair"] = 100;
 head_addon_prices["piercings"] = 50;
 head_addon_prices["horns"] = 50;
-head_addon_prices["antlers"] = 200;
+head_addon_prices["antlers"] = 250;
 
 var partial_addon_prices = new Array();
 partial_addon_prices["handpaw-claws"] = 50;
-partial_addon_prices["feetpaws"] = 550;
-partial_addon_prices["sockpaws"] = 500;
+partial_addon_prices["feetpaws"] = 600;
+partial_addon_prices["sockpaws"] = 600;
 partial_addon_prices["feetpaw-claws"] = 50;
 partial_addon_prices["tail-nub"] = 0;
-partial_addon_prices["tail-curly"] = 50;
-partial_addon_prices["tail-feline"] = 50;
-partial_addon_prices["tail-floor"] = 100;
+partial_addon_prices["tail-curly"] = 150;
+partial_addon_prices["tail-feline"] = 150;
+partial_addon_prices["tail-floor"] = 200;
+partial_addon_prices["tail-articulated"] = 500;
 
 var fullsuit_addon_prices = new Array();
-fullsuit_addon_prices["wings-small"] = 300;
+fullsuit_addon_prices["wings-small"] = 400;
 fullsuit_addon_prices["handpaw-claws"] = 50;
 fullsuit_addon_prices["feetpaw-claws"] = 50;
 fullsuit_addon_prices["feetpaw-indoor"] = 100;
 fullsuit_addon_prices["tail-nub"] = 0;
-fullsuit_addon_prices["tail-curly"] = 50;
-fullsuit_addon_prices["tail-feline"] = 50;
-fullsuit_addon_prices["tail-floor"] = 100;
+fullsuit_addon_prices["tail-curly"] = 150;
+fullsuit_addon_prices["tail-feline"] = 150;
+fullsuit_addon_prices["tail-floor"] = 200;
+fullsuit_addon_prices["tail-articulated"] = 500;
 
 var complexity_prices = new Array();
 complexity_prices["Simple"] = 1;
