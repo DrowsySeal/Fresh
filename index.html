@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>DrowsySeal</title>
-  <meta name="description" content="Drowsy Seal: A fursuit maker who specializes in cute sparkledogs c:">
+  <title>Drowsy Seal</title>
+  <meta name="description" content="Drowsy Seal: A fursuit maker who specializes in cute critters!">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/barebones.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/starscape.css">
   <link rel="stylesheet" href="https://kit.fontawesome.com/32bceee90f.css" crossorigin="anonymous">
 
   <!-- Favicon
@@ -34,11 +35,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- Start NAV -->
     <nav class="list-wrap">
-      <a href="/"><img id="mobile-logo" src="./images/logo.png"></a></li>
+      <a href="/"><img id="mobile-logo" src="./images/logo_nav.svg"></a></li>
       <ul class="grid-container sevenths menu">
-        <li><a href="/portfolio.html">Portfolio</a></li>   
+        <li><a href="#portfolio">Portfolio</a></li>   
         <div aria-haspopup="true" class="dropdown">
-          <li>Fursuits <span>&#9660;</span></li>
+          <li>Fursuits<span>&#9660;</span></li>
           <div class="dropdown-options grid-container thirds">
             <li><a href="/pricing.html">Pricing</a></li>
             <li><a href="/premades.html">Premades</a></li>
@@ -47,7 +48,7 @@
           </div>
         </div>
         <li><a href="/faq.html">FAQs</a></li>
-        <li id="logo"><a href="/"><img src="./images/logo.png"></a></li>
+        <li id="logo"><a href="/"><img src="./images/logo_nav.svg"></a></li>
         <li><a href="/tos.html">ToS</a></li>
         <li><a href="/contact.html">Contact</a></li>
         <li><a href="https://drowsyseal.bigcartel.com/">Shop</a></li>
@@ -58,11 +59,12 @@
       </button>
     </nav>
     <!-- End NAV -->
-    <div id="hero">
+    
+    <div id="hero" class="grid">
+      <canvas id="canvas" class="canvas full"></canvas>
       <div id="hero-details" class="grid-container full">
-        <span id="hero-text">
-          <h4>Fursuits by</h4>
-          <h1>Drowsy Seal</h1>
+        <span id="hero-text grid-container full">
+            <img class="u-max-full-width" id="hero-logo" src="./images/logo.svg">
         </span>
         <div class="grid-container halves" id="fast-links">
           <a class="button" href="/commissions.html">Commissions</a>
@@ -71,17 +73,54 @@
       </div>
     </div>
     <div id="commission-status">
-      <span>Commissions are closed</span>
+      <span>Commissions are closed - Quotes are <strong><a href="/commissions.html">OPEN</a></strong></span>
     </div>
+    <div class="main">
     <div class="grid-container halves u-align-left" id="about">
-      <img src="/images/about-img.png">  
+      <img src="/images/hero.png">  
       <div>
-        <h3>Heya!</h3>
-        <p>I'm Sym, your Drowsy Seal! I specialize in cute fursuits, as well as squishy mochi props and accessories.</p>
+        <h1>Heya!</h1>
+        <p>I'm Sym, your Drowsy Seal! I'm a fursuit maker who specializes in cute critters, as well as squishy mochi minky props and accessories.</p>
 
-        <p>You can find my FAQs <strong><a href="/faq.html">here</a></strong>, and you can find my pricelist over <strong><a href="/pricing.html">here</a></strong>. Give those a good lookover, as they have valuable information.</p>
-        
-        <p>And of course, you can find me on most social media <strong><a href="/contact.html">@DrowsySeal</a></strong>! c:</p>
+        <p>I pride myself on high quality, comfortable work, with excellent vision and ventilation. Everything is completely customized, and I love to be on the cutting edge of modern fursuit making methods.</p>
+
+        <p>I can't wait to make your characters come to life! Please don't hesitate to <strong><a href="/contact.html">reach out</a></strong> c:</p>
+      </div>
+    </div>
+    </div>
+    <div id="portfolio">
+      <h1 class="full u-max-full-width">Portfolio</h1>
+      <div class="grid-container full portfolio">
+          <h3>Fursuits</h3>
+          <div class="grid-container quarters" id="fursuit">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/taro_full.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/taro.jpg"> 
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/tog.jpg">          
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/ava.jpg">
+
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/sym2025.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/darling.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/mendomi.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/pepper.jpg">
+
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/gogurt.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/cantrip_full.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/rayne.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/ink.jpg">
+          </div>
+      </div>
+      <div class="grid-container full portfolio">
+          <h3>Parts & Props</h3>
+          <div class="grid-container quarters" id="props">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/bell_collar.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/bell_collar_detail.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/bell_detail.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/heart_collar_detail.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/heart_collar.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/paws_lava.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/paws_pumpkin.jpg">
+            <img class="portfolio-item u-max-full-width" src="/images/portfolio/convention/paws_rainbow.jpg">
+          </div>
       </div>
     </div>
     <div id="footer">
@@ -90,7 +129,7 @@
           <h5>Contact</h5>
           <div class="footer-link">
             <h6><i class="fa-solid fa-envelope"></i>Email:</h6>
-            <a href="mailto:drowsyseal@gmail.com">drowsyseal@gmail.com</a>
+            <a href="mailto:contact@drowsyseal.com">contact@drowsyseal.com</a>
           </div>
           <div class="footer-link">
             <h6><i class="fa-brands fa-telegram"></i>Telegram:</h6></i>
@@ -110,10 +149,11 @@
       </div>  
     </div>
   </div>
-  <div id="copyright">© 2025 DrowsySeal</div>
+  <div id="copyright">© 2026 DrowsySeal</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="js/script.js"></script>
+    <script src="js/stars.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

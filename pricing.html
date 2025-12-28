@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>DrowsySeal</title>
-  <meta name="description" content="DrowsySeal: A fursuit maker who specializes in cute sparkledogs c:">
+  <title>Drowsy Seal</title>
+  <meta name="description" content="Drowsy Seal: A fursuit maker who specializes in cute critters!">
   <meta name="author" content="">
 
   <!-- Mobile Specific Metas
@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/barebones.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/starscape.css">
   <link rel="stylesheet" href="https://kit.fontawesome.com/32bceee90f.css" crossorigin="anonymous">
 
   <!-- Favicon
@@ -34,39 +35,42 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- Start NAV -->
     <nav class="list-wrap">
-        <a href="/"><img id="mobile-logo" src="./images/logo.png"></a></li>
-        <ul class="grid-container sevenths menu">
-          <li><a href="/portfolio.html">Portfolio</a></li>   
-          <div aria-haspopup="true" class="dropdown">
-            <li>Fursuits <span>&#9660;</span></li>
-            <div class="dropdown-options grid-container thirds">
-              <li><a href="/pricing.html">Pricing</a></li>
-              <li><a href="/premades.html">Premades</a></li>
-              <li><a href="/commissions.html">Commissions</a></li>
-              <li><a href="/construction.html">Construction</a></li>
-            </div>
+      <a href="/"><img id="mobile-logo" src="./images/logo_nav.svg"></a></li>
+      <ul class="grid-container sevenths menu">
+        <li><a href="/#portfolio">Portfolio</a></li>   
+        <div aria-haspopup="true" class="dropdown">
+          <li>Fursuits<span>&#9660;</span></li>
+          <div class="dropdown-options grid-container thirds">
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/premades.html">Premades</a></li>
+            <li><a href="/commissions.html">Commissions</a></li>
+            <li><a href="/construction.html">Construction</a></li>
           </div>
-          <li><a href="/faq.html">FAQs</a></li>
-          <li id="logo"><a href="/"><img src="./images/logo.png"></a></li>
-          <li><a href="/tos.html">ToS</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="https://drowsyseal.bigcartel.com/">Shop</a></li>
-        </ul>
-        <button class="hamburger">
-          <i class="fa fa-solid fa-bars menuIcon"></i>
-          <i class="fa fa-solid fa-xmark closeIcon"></i>
-        </button>
-      </nav>
-      <!-- End NAV -->
-    <div class="grid-container full">
-        <h1 class="full u-max-full-width">Pricing Info</h1>
+        </div>
+        <li><a href="/faq.html">FAQs</a></li>
+        <li id="logo"><a href="/"><img src="./images/logo_nav.svg"></a></li>
+        <li><a href="/tos.html">ToS</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="https://drowsyseal.bigcartel.com/">Shop</a></li>
+      </ul>
+      <button class="hamburger">
+        <i class="fa fa-solid fa-bars menuIcon"></i>
+        <i class="fa fa-solid fa-xmark closeIcon"></i>
+      </button>
+    </nav>
+    <!-- End NAV -->
+    <div class="page-wrapper">
+        <div class="grid-container full white">
+            <h1 class="full grid-container u-max-full-width">Pricing Info</h1>
         <div>
             <p>All prices are in USD, and do not include shipping.</p>
-            <a class="button" href="/tos.html">Terms of Service</a>
+            <div>
+                <a class="button" href="/calculator.html">Estimate Calculator</a>
+            </div>    
         </div> 
         <div>
             <h2>Fursuits</h2>
-            <div class="grid-container quarters">
+            <div class="grid-container thirds">
                 <div>
                     <h3>Head</h3>
                     <h5>$3,000+</h5>
@@ -93,7 +97,7 @@
                         </ul>
                     </div>
                 </div>
-                <div>
+                <!-- <div>
                     <h3>Full Partial</h3>
                     <h5>$4,200+</h5>
                     <img class="u-max-full-width hide-mobile" src="./images/chibi_fullpartial.png">
@@ -105,7 +109,7 @@
                             <li>Tail</li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <div>
                     <h3>Full Suit</h3>
                     <h5>$7,700+</h5>
@@ -120,13 +124,15 @@
                     </div>
                 </div>
             </div>
+            </div>
             <div class="grid-container full bullet-points bullets">
                 <h3>Features</h3>
+                <div class="grid=grid-container"><a class="button" href="/construction.html">Construction Details</a></div>
                 <div class="u-align-left">
                     <h5>Heads</h5>
                     <ul>
                         <li>Lightweight and hollow TPU headbase</li>
-                        <li>Interior completely lined with quilted broadcloth or colorfast neoprene, with an adjustable padded head strap</li>
+                        <li>Interior completely lined with quilted broadcloth or colorfast neoprene, with an adjustable elastic head strap</li>
                         <li>All seams sewn with high quality thread</li>
                         <li>Excellent vision and ventilation</li>
                         <li>3D eyes with dye sublimated eye mesh, which includes custom art on the front and solid black on the back for visibility</li>
@@ -139,7 +145,7 @@
                         <li>Super squishy mochi minky beans</li>
                         <li>Removable neoprene pillows for finger padding</li>
                         <li>Unlined interior, with mochi minky cuff at the wrist</li>
-                        <li>Round and plush four finger design</li>
+                        <li>Round and plush four finger design, or three finger hooves</li>
                     </ul>
                     <h5>Indoor Sockpaws</h5>
                     <ul>
@@ -176,9 +182,10 @@
                     <div>
                         <h5>Add-ons</h5>
                         <ul>
+                            <li>Removable fan in muzzle: +$75</li>
+                            <li>Velcro eyelids: +$50 per pair</li>
+                            <li>Extra tongues: +$30 each</li>
                             <li>Mochi minky claws: +$50</li>
-                            <li>Velcro eyelids: +$35 per pair</li>
-                            <li>Extra tongues: +$20 each</li>
                             <li>Additional furs: +$55 each</li>
                         </ul> 
                     </div>
@@ -193,10 +200,7 @@
                             <span><strong>All additional parts must be purchased at the start of a commission.</strong> I cannot guarantee matching fur colors after!</span>
                         </ul>
                     </div>
-                </div> 
-                <div>
-                    <a class="button" href="/calculator.html">Estimate Calculator</a>
-                </div>              
+                </div>           
                 <h2>Props</h2>
                 <div>
                     <h5>No longer available for commission</h5>
@@ -207,7 +211,9 @@
             </div>
         </div>
     </div>
-    <div id="copyright">© 2025 DrowsySeal</div>
+    </div>
+    </div>
+    <div id="copyright">© 2026 DrowsySeal</div>
 
     <!-- End Document
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->

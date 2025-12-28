@@ -10,10 +10,12 @@ function toggleMenu() {
   if (menu.classList.contains("showMenu")) {
     menu.classList.remove("showMenu");
     closeIcon.style.visibility = "hidden";
+    closeIcon.style.display = "none";
     menuIcon.style.visibility = "visible";
   } else {
     menu.classList.add("showMenu");
     closeIcon.style.visibility = "visible";
+    closeIcon.style.display = "inline-block";
     menuIcon.style.visibility = "hidden";
   }
 }

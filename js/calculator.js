@@ -19,8 +19,9 @@ mochi_prices["mochi5"]=165;
 mochi_prices["mochi6"]=220;
 
 var head_addon_prices = new Array();
-head_addon_prices["eyelids"] = 35;
-head_addon_prices["tongues"] = 20;
+head_addon_prices["fan"] = 75;
+head_addon_prices["eyelids"] = 50;
+head_addon_prices["tongues"] = 30;
 head_addon_prices["teeth"] = 30;
 head_addon_prices["hair"] = 100;
 head_addon_prices["piercings"] = 50;
@@ -35,19 +36,19 @@ partial_addon_prices["feetpaw-claws"] = 50;
 partial_addon_prices["tail-nub"] = 0;
 partial_addon_prices["tail-curly"] = 150;
 partial_addon_prices["tail-feline"] = 150;
-partial_addon_prices["tail-floor"] = 200;
-partial_addon_prices["tail-articulated"] = 500;
+partial_addon_prices["tail-floor"] = 250;
+partial_addon_prices["tail-articulated"] = 600;
 
 var fullsuit_addon_prices = new Array();
 fullsuit_addon_prices["wings-small"] = 400;
 fullsuit_addon_prices["handpaw-claws"] = 50;
 fullsuit_addon_prices["feetpaw-claws"] = 50;
-fullsuit_addon_prices["feetpaw-indoor"] = 100;
+// fullsuit_addon_prices["feetpaw-indoor"] = 600;
 fullsuit_addon_prices["tail-nub"] = 0;
 fullsuit_addon_prices["tail-curly"] = 150;
 fullsuit_addon_prices["tail-feline"] = 150;
-fullsuit_addon_prices["tail-floor"] = 200;
-fullsuit_addon_prices["tail-articulated"] = 500;
+fullsuit_addon_prices["tail-floor"] = 250;
+fullsuit_addon_prices["tail-articulated"] = 600;
 
 var complexity_prices = new Array();
 complexity_prices["Simple"] = 1;
