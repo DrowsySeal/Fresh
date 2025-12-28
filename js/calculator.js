@@ -23,10 +23,13 @@ head_addon_prices["fan"] = 75;
 head_addon_prices["eyelids"] = 50;
 head_addon_prices["tongues"] = 30;
 head_addon_prices["teeth"] = 30;
-head_addon_prices["hair"] = 100;
+head_addon_prices["bangs"] = 50;
+head_addon_prices["mohawk"] = 100;
+head_addon_prices["hair"] = 150;
 head_addon_prices["piercings"] = 50;
 head_addon_prices["horns"] = 50;
 head_addon_prices["antlers"] = 250;
+
 
 var partial_addon_prices = new Array();
 partial_addon_prices["handpaw-claws"] = 50;
