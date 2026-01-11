@@ -44,6 +44,8 @@ partial_addon_prices["tail-articulated"] = 600;
 
 var fullsuit_addon_prices = new Array();
 fullsuit_addon_prices["wings-small"] = 400;
+fullsuit_addon_prices["spikes"] = 200;
+fullsuit_addon_prices["hidden-pocket"] = 50;
 fullsuit_addon_prices["handpaw-claws"] = 50;
 fullsuit_addon_prices["feetpaw-claws"] = 50;
 // fullsuit_addon_prices["feetpaw-indoor"] = 600;
