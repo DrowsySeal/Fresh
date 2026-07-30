@@ -7,3 +7,15 @@
   from = "/"
     to = "https://exclamationbark.com/"
       status = 301
+
+[[redirects]]
+  from = "https://drowsyseal.com*"
+  to = "https://exclamationbark.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.drowsyseal.com*"
+  to = "https://exclamationbark.com/:splat"
+  status = 301
+  force = true
